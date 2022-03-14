@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border-style: none;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.card-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.card{
+    height: 250px;
+    width: 700px;
+    background-color:white;
+    border-radius: 15px;
+    display: flex;
+    box-shadow:0px 5px 10px 0px rgba(50, 50, 50, 0.2);
+}
+
+.card-photo{
+    height: 250px;
+    width: 300px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.card-text{
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+.card-text .card-header{
+    color:hsl(217, 19%, 35%);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.card-text .card-body{
+    color: hsl(212, 23%, 69%);
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.card-text .card-creator{
+    color: hsl(214, 17%, 51%);
+    display: flex;
+}
+
+.card-text .card-creator {
+    color:hsl(217, 19%, 35%);
+    margin-top: 15px;
+}
+
+.card-creator .creator-info{
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.card-creator .creator-name{
+    font-weight: 700;
+}
+
+.card-creator .creator-date{
+    color: hsl(212, 23%, 69%);
+}
+
+.card-creator .creator-photo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.card-creator .share{
+    margin-left: 130px;
+    margin-top: 10px;
+    height: 15px;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.card-creator .share:hover{
+    cursor: pointer;
+}
+
+.share-container.on{
+    height: 45px;
+    width: 200px;
+    background-color: hsl(217, 19%, 35%);
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    border-radius: 10px;
+}
+
+.share-container.on .share-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: scale(0.9);
+    padding-top: 13px;
+    color: hsl(212, 23%, 69%);
+}
+
+.share-container.off .share-content{
+    display: none;
+}
+
+@media screen and (max-width:700px){
+    
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .card{
+        height: 500px;
+        width: 350px;
+    }
+
+    .card-photo{
+        height: 200px;
+        width: 350px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 15px;
+        position: absolute;
+    }
+
+    .card-text{
+        margin-top: 220px;
+        margin-bottom: 300px;
+    }
+
+    .card-text .card-header{
+        font-size: 0.9rem;
+    }
+
+    .card-text .card-body{
+        font-size: 14px;
+    }
+
+    .card-creator .share{
+        margin-left: 80px;
+    }
+
+    .card-text .card-creator{
+        margin-top: 30px;
+    }
+
+    .share-container.on{
+        top: 70%;
+        left: 40%;
+    }
+    
+}
+
+
+
+
